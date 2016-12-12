@@ -12,11 +12,21 @@ var connection = mysql.createConnection({
 })
 
 
+//Set CORS
+// app.all('/', function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "X-Requested-With");
+//   next();
+// });
+
+
 //Test API
 app.get('/test', function (req, res) {
 	connection.query('SELECT * from users', function (err, rows, fields) {
-    if (!err)
+    if (!err){
+      res.header("Access-Control-Allow-Origin", "*");
       res.status(200).json({'name':rows[0].name})
+    }
     else
       res.status(500).send('Error ')     
 	})
