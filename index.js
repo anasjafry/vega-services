@@ -16,7 +16,7 @@ var connection = mysql.createConnection({
 app.get('/test', function (req, res) {
 	connection.query('SELECT * from users', function (err, rows, fields) {
     if (!err)
-      res.status(200).send('Result'+rows[0].name)
+      res.status(200).json({'name':rows[0].name})
     else
       res.status(500).send('Error ')     
 	})
