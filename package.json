@@ -1,0 +1,19 @@
+{
+  "name": "vega-services",
+  "version": "1.0.0",
+  "description": "Service layer for Vega",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "npm install express --save"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mysql": "^2.12.0"
+  }
+}
